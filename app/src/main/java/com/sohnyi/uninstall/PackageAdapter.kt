@@ -27,10 +27,10 @@ class PackageAdapter : ListAdapter<PackageInfo, PackageAdapter.PackageHolder>(Pa
                 binding.ivIcon.setImageDrawable(pm.getApplicationIcon(pi.applicationInfo))
                 binding.name.text = pm.getApplicationLabel(pi.applicationInfo)
                 binding.id.text = pi.packageName
+                // TODO: delete function to iml
             } catch (e: Exception) {
                 e.printStackTrace()
             }
-
         }
     }
 }

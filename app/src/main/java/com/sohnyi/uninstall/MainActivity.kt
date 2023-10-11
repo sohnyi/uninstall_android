@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // FIXME: can not get all packages
+    // FIXME: getInstalledPackages() Deprecated
     private fun getAllPackages(): List<PackageInfo> {
         val packageInfoList = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             packageManager.getInstalledPackages(PackageManager.PackageInfoFlags.of(PackageManager.GET_META_DATA.toLong()))
